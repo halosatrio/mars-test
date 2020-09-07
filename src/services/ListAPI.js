@@ -1,0 +1,173 @@
+const apis = [
+  {
+    id: 1,
+    api: "Cat Facts",
+    description: "Daily cat facts",
+    authType: { id: 1, name: "No" },
+    https: "Yes",
+    link: "https://alexwohlbruck.github.io/cat-facts/",
+  },
+  {
+    id: 2,
+    api: "HTTPCat",
+    description: "Cat for every HTTP Status",
+    authType: { id: 1, name: "No" },
+    https: "Yes",
+    link: "https://http.cat/",
+  },
+  {
+    id: 3,
+    api: "Dogs",
+    description: "Based on the Stanford Dogs Datase",
+    authType: { id: 1, name: "No" },
+    https: "Yes",
+    link: "https://dog.ceo/dog-api/",
+  },
+  {
+    id: 4,
+    api: "RescueGroups",
+    description: "Animal Adoption",
+    authType: { id: 1, name: "No" },
+    https: "Yes",
+    link:
+      "https://userguide.rescuegroups.org/display/APIDG/API+Developers+Guide+Home",
+  },
+  {
+    id: 5,
+    api: "Gmail",
+    description: "Flexible, RESTful access to the user's inbox",
+    authType: { id: 3, name: "OAuth" },
+    https: "Yes",
+    link: "https://developers.google.com/gmail/api/",
+  },
+  {
+    id: 6,
+    api: "markerapi",
+    description: "Trademark Search",
+    authType: { id: 1, name: "No" },
+    https: "No",
+    link: "http://www.markerapi.com/",
+  },
+  {
+    id: 7,
+    api: "Trello",
+    description:
+      "Boards, lists and cards to help you organize and prioritize your projects",
+    authType: { id: 3, name: "OAuth" },
+    https: "Yes",
+    link: "https://developers.trello.com/",
+  },
+  {
+    id: 8,
+    api: "Charity Search",
+    description: "Non-profit charity data",
+    authType: { id: 2, name: "apiKey" },
+    https: "No",
+    link: "http://charityapi.orghunter.com/",
+  },
+  {
+    id: 9,
+    api: "Clearbit Logo",
+    description: "Search for company logos and embed them in your projects",
+    authType: { id: 2, name: "apiKey" },
+    https: "Yes",
+    link: "https://clearbit.com/docs#logo-api",
+  },
+  {
+    id: 10,
+    api: "Domainsdb.info",
+    description: "Registered Domain Names Search",
+    authType: { id: 1, name: "No" },
+    https: "yes",
+    link: "http://charityapi.orghunter.com/",
+  },
+  {
+    id: 11,
+    api: "Freelancer",
+    description: "Hire freelancers to get work done",
+    authType: { id: 3, name: "OAuth" },
+    https: "Yes",
+    link: "https://developers.freelancer.com/",
+  },
+  {
+    id: 12,
+    api: "Google Analytics",
+    description:
+      "Collect, configure and analyze your data to reach the right audience",
+    authType: { id: 3, name: "OAuth" },
+    https: "Yes",
+    link: "https://developers.google.com/analytics/",
+  },
+  {
+    id: 13,
+    api: "MailboxValidator",
+    description: "Validate email address to improve deliverability",
+    authType: { id: 2, name: "apiKey" },
+    https: "Yes",
+    link: "https://www.mailboxvalidator.com/api-single-validation",
+  },
+  {
+    id: 14,
+    api: "Google Calendar",
+    description: "Display, create and modify Google calendar events",
+    authType: { id: 3, name: "OAuth" },
+    https: "Yes",
+    link: "https://developers.google.com/google-apps/calendar/",
+  },
+  {
+    id: 15,
+    api: "Calendar Index",
+    description: "Worldwide Holidays and Working Days",
+    authType: { id: 2, name: "apiKey" },
+    https: "Yes",
+    link: "https://www.calendarindex.com/",
+  },
+  {
+    id: 16,
+    api: "Dropbox",
+    description: "File Sharing and Storage",
+    authType: { id: 3, name: "OAuth" },
+    https: "Yes",
+    link: "https://www.dropbox.com/developers",
+  },
+  {
+    id: 17,
+    api: "Google Drive",
+    description: "File Sharing and Storage",
+    authType: { id: 3, name: "OAuth" },
+    https: "Yes",
+    link: "https://developers.google.com/drive/",
+  },
+  {
+    id: 18,
+    api: "OneDrive",
+    description: "File Sharing and Storage",
+    authType: { id: 3, name: "OAuth" },
+    https: "Yes",
+    link: "https://dev.onedrive.com/",
+  },
+  {
+    id: 19,
+    api: "Pastebin",
+    description: "Plain Text Storage",
+    authType: { id: 2, name: "apiKey" },
+    https: "Yes",
+    link: "https://pastebin.com/api/",
+  },
+  {
+    id: 20,
+    api: "Blockchain",
+    description: "Bitcoin Payment, Wallet & Transaction Data",
+    authType: { id: 1, name: "No" },
+    https: "Yes",
+    link: "https://www.blockchain.info/api",
+  },
+];
+
+export function getAPIs() {
+  return apis;
+}
+
+export function getAPI(id) {
+  return apis.find((m) => m.id === id);
+}

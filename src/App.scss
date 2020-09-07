@@ -1,0 +1,194 @@
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+
+$blue: #007bff !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #3f0d12 !default;
+$orange: #915d2e !default;
+$yellow: #e8cb88 !default;
+$green: #133833 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;900&family=Poppins:wght@300;400;500&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+$font-serif: "Playfair Display", serif;
+
+// HOMEPAGE
+.home-page {
+  margin-top: 200px;
+}
+
+// NavBar
+.navbar {
+  font-family: "Poppins", sans-serif;
+  border-bottom: 1px solid $gray-200;
+
+  ul.navbar-nav {
+    li.nav-item {
+      &.active {
+        a.nav-link {
+          color: $green;
+        }
+      }
+      a {
+        &.nav-link {
+          letter-spacing: 1px;
+          color: $gray-700;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// brand-text-icon
+.brand-text-icon {
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: $yellow;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+// JUMBOTRON
+.jumbotron {
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  position: relative;
+  margin-bottom: 60px;
+  // z-index: -1;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    bottom: 0;
+  }
+
+  .container {
+    color: $gray-100;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    h1 {
+      font-family: $font-serif;
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 1pt;
+    }
+
+    p {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    .button {
+      z-index: 3;
+    }
+  }
+}
+
+// PROFILES
+.profiles {
+  .item {
+    margin-bottom: 25px;
+
+    img {
+      max-width: 150px;
+      border-radius: 75px;
+      margin-bottom: 10px;
+    }
+    h4 {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// SERVICES
+.services {
+  img {
+    max-width: 350px;
+  }
+}
+
+// ARTICLES
+.articles {
+  img {
+    max-width: 350px;
+  }
+}
+
+// FOOTER
+footer {
+  font-family: "Poppins", sans-serif;
+  bottom: 0;
+  border-top: 1px solid $gray-200;
+  padding-top: 20px;
+
+  h2.text-logo {
+    font-family: $font-serif;
+    font-weight: 900;
+    letter-spacing: 2pt;
+  }
+
+  .head-item {
+    margin-top: 8px;
+    color: $yellow;
+    font-weight: 500;
+  }
+
+  .list-group-item {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0.3125rem 0;
+    border: 0;
+    a,
+    span {
+      color: white;
+      font-weight: 300;
+    }
+    a {
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+  .copyrights {
+    font-size: 15px;
+    margin: 20px 0;
+    font-weight: 300;
+    color: white;
+
+    a,
+    span {
+      color: $yellow;
+    }
+    a {
+      &:hover {
+        color: salmon;
+      }
+    }
+  }
+}
