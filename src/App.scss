@@ -12,7 +12,6 @@ $blue: #007bff !default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #e83e8c !default;
-$red: #3f0d12 !default;
 $orange: #915d2e !default;
 $yellow: #e8cb88 !default;
 $green: #133833 !default;
@@ -35,6 +34,8 @@ $font-serif: "Playfair Display", serif;
 
   ul.navbar-nav {
     li.nav-item {
+      margin-left: 50px;
+
       &.active {
         a.nav-link {
           color: $green;
@@ -57,18 +58,20 @@ $font-serif: "Playfair Display", serif;
 
 // brand-text-icon
 .brand-text-icon {
-  font-size: 1.25rem;
-  font-weight: 500;
-  font-family: "Poppins", sans-serif;
-  color: $yellow;
+  font-size: 1.75rem;
+  letter-spacing: 1px;
+  font-weight: 900;
+  font-family: $font-serif;
+  color: crimson;
   &:hover {
-    color: white;
+    color: $gray-600;
     text-decoration: none;
   }
 }
 
 // JUMBOTRON
 .jumbotron {
+  background: url(./assets/jumbotron-bg.jpg);
   background-size: cover;
   background-position: center;
   height: 400px;
@@ -130,33 +133,34 @@ $font-serif: "Playfair Display", serif;
 // SERVICES
 .services {
   img {
-    max-width: 350px;
+    width: 100%;
   }
 }
 
 // ARTICLES
 .articles {
   img {
-    max-width: 350px;
+    width: 100%;
   }
 }
 
 // FOOTER
 footer {
+  background-color: $gray-500;
   font-family: "Poppins", sans-serif;
   bottom: 0;
-  border-top: 1px solid $gray-200;
   padding-top: 20px;
 
   h2.text-logo {
     font-family: $font-serif;
     font-weight: 900;
     letter-spacing: 2pt;
+    color: crimson;
   }
 
   .head-item {
     margin-top: 8px;
-    color: $yellow;
+    color: crimson;
     font-weight: 500;
   }
 
@@ -166,12 +170,12 @@ footer {
     border: 0;
     a,
     span {
-      color: white;
-      font-weight: 300;
+      color: black;
+      font-weight: 400;
     }
     a {
       &:hover {
-        color: $yellow;
+        color: white;
       }
     }
   }
@@ -179,11 +183,11 @@ footer {
     font-size: 15px;
     margin: 20px 0;
     font-weight: 300;
-    color: white;
+    color: black;
 
     a,
     span {
-      color: $yellow;
+      color: crimson;
     }
     a {
       &:hover {

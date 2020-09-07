@@ -48,7 +48,7 @@ const Services = () => {
             );
           })}
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4 mt-4">
           <img src={serviceImage} alt="service" />
         </div>
       </div>

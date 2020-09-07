@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 
-import IcontText from "./IconText";
 import Button from "./Button";
 
 const Navbar = (props) => {
   const [collapsed, setCollapsed] = useState(true);
 
   const toggleNavbar = () => {
-    setCollapsed({
-      collapsed: !collapsed,
-    });
+    setCollapsed(!collapsed);
   };
 
   console.log(props);
@@ -28,7 +25,9 @@ const Navbar = (props) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light py-3">
       <div className="container">
-        <IcontText />
+        <Button className="brand-text-icon" href="/" type="link">
+          Company Name
+        </Button>
         <button
           onClick={toggleNavbar}
           className={`${classTwo}`}
@@ -41,8 +40,11 @@ const Navbar = (props) => {
         >
           <span className="navbar-toggler-icon" />
         </button>
-        <div className={`${classOne}`} id="navbarResponsive">
-          <ul className="navbar-nav ml-auto">
+        <div
+          className={`${classOne} justify-content-end`}
+          id="navbarResponsive"
+        >
+          <ul className="navbar-nav">
             <li className={`nav-item${getNavLinkClass("/")}`}>
               <Button className="nav-link" type="link" href="/">
                 Home

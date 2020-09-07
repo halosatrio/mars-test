@@ -6,11 +6,15 @@ import { InstagramIcon, TwitterIcon, FacebookIcon } from "../assets/icons";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary">
+    <footer>
       <div className="container mt-4">
         <div className="row">
           <div className="col-sm-5 col-md-auto col-lg-3 mb-4 text-center text-sm-left">
-            <h2 className="text-logo mt-2 text-secondary">COMPANY</h2>
+            <h2 className="text-logo mt-2">
+              COMPANY
+              <br />
+              NAME
+            </h2>
           </div>
           <div className="col-sm-4 col-md-auto col-lg-3 mb-4 text-center text-sm-left">
             <h6 className="mt-2 head-item">About Us</h6>

@@ -61,6 +61,10 @@ export class WireframeDua extends Component {
     return { totalCount: filtered.length, data: apis };
   };
 
+  printFunction = () => {
+    window.print();
+  };
+
   render() {
     const { length: count } = this.state.apis;
     const { pageSize, currentPage, sortColumn } = this.state;
@@ -80,7 +84,11 @@ export class WireframeDua extends Component {
             />
           </div>
           <div className="col-3">
-            <Button type="button" className="btn btn-secondary">
+            <Button
+              type="button"
+              className="btn btn-secondary"
+              onclick={() => this.printFunction()}
+            >
               export
             </Button>
           </div>

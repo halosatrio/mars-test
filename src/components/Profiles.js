@@ -29,7 +29,7 @@ const Profiles = (props) => {
   ];
 
   return (
-    <div className="profiles row mb-5">
+    <div className="profiles row my-5">
       {profileData.map((item) => {
         return (
           <div className="item col-6 col-md-3 text-center">
