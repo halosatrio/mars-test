@@ -30,9 +30,9 @@ const Profiles = (props) => {
 
   return (
     <div className="profiles row my-5">
-      {profileData.map((item) => {
+      {profileData.map((item, index) => {
         return (
-          <div className="item col-6 col-md-3 text-center">
+          <div key={index} className="item col-6 col-md-3 text-center">
             <img src={item.image} alt={item.name} />
             <h4>{item.name}</h4>
             <h6>{item.sentence}</h6>

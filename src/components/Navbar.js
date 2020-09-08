@@ -9,8 +9,6 @@ const Navbar = (props) => {
     setCollapsed(!collapsed);
   };
 
-  console.log(props);
-
   const getNavLinkClass = (path) => {
     return props.location.pathname === path ? " active" : "";
   };

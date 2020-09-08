@@ -16,7 +16,6 @@ export class WireframeDua extends Component {
     authType: [],
     currentPage: 1,
     pageSize: 7,
-    selectedAuthType: null,
     sortColumn: { path: "title", order: "asc" },
   };
 
@@ -62,16 +61,15 @@ export class WireframeDua extends Component {
   };
 
   printFunction = () => {
-    window.print();
+    setTimeout(function () {
+      window.print();
+    }, 0);
   };
 
   render() {
-    const { length: count } = this.state.apis;
     const { pageSize, currentPage, sortColumn } = this.state;
 
-    if (count === 0) return <p>There are no APIS in the database.</p>;
-
-    const { totalCount, data: apis } = this.getPagedData();
+    const { totalCount, data } = this.getPagedData();
 
     return (
       <div className="container my-5">
@@ -93,7 +91,7 @@ export class WireframeDua extends Component {
             </Button>
           </div>
           <ApisTable
-            apis={apis}
+            apis={data}
             sortColumn={sortColumn}
             onSort={this.handleSort}
           />

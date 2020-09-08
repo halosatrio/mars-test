@@ -29,9 +29,9 @@ const Services = () => {
       <h3 className="mb-4">SERVICES</h3>
       <div className="row">
         <div className="col-6 col-md-4">
-          {data.map((item) => {
+          {data.map((item, index) => {
             return (
-              <div key={item.id} className="mb-3">
+              <div key={index} className="mb-3">
                 <h5>{item.head}</h5>
                 <p>{item.body}</p>
               </div>
@@ -39,9 +39,9 @@ const Services = () => {
           })}
         </div>
         <div className="col-6 col-md-4">
-          {data.map((item) => {
+          {data.map((item, index2) => {
             return (
-              <div key={item.id} className="mb-3">
+              <div key={index2} className="mb-3">
                 <h5>{item.head}</h5>
                 <p>{item.body}</p>
               </div>

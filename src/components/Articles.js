@@ -15,7 +15,7 @@ const Articles = () => {
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem sequi doloribus enim voluptas.",
     },
     {
-      id: 1,
+      id: 3,
       image: "/images/article3.png",
       content:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, officia architecto!",
@@ -26,9 +26,9 @@ const Articles = () => {
     <div className="articles mb-5">
       <h3 className="mb-4">ARTICLES</h3>
       <div className="row justify-content-center">
-        {articleData.map((item) => {
+        {articleData.map((item, index) => {
           return (
-            <div key={item.id} className="col-sm-4">
+            <div key={index} className="col-sm-4">
               <img src={item.image} alt={item.id} />
               <p className="mt-3">{item.content}</p>
             </div>

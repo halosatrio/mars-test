@@ -1,7 +1,7 @@
 export const authType = [
-  { _id: 1, name: "No" },
-  { _id: 2, name: "apiKey" },
-  { _id: 3, name: "OAuth" },
+  { id: 1, name: "No" },
+  { id: 2, name: "apiKey" },
+  { id: 3, name: "OAuth" },
 ];
 
 export function getAuthType() {
